@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  body { @apply bg-slate-100 text-slate-900; font-family: system-ui, -apple-system, sans-serif; }
+}
+
+@layer utilities {
+  .tooth-active { animation: toothPulse 2s ease-in-out infinite; }
+}
+
+@keyframes toothPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(2, 132, 199, 0.4); }
+  50% { box-shadow: 0 0 0 4px rgba(2, 132, 199, 0); }
+}
