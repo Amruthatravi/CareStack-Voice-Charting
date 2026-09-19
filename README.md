@@ -10,7 +10,7 @@
 | **Team Name:**    | Innovatex                          |
 | **Team Members:** | Amrutha T Ravi • Fuad Fysal • Shirin Shukkoor |
 | **Institution:**  | College Of Engineering Trivandrum                   |
-| **Live Demo:**    |                     |
+| **Live Demo:**    |  https://drive.google.com/file/d/1U3YW8sazTy5EC2E6Sn4jmaE90QSagJJt/view?usp=drivesdk               |
 | **Pitch Video:**  | https://www.instagram.com/reel/DdcjpvShBnY/?stkn=MjZyOG9zNm9ubWVt           |
 
 ---
@@ -64,9 +64,9 @@ Our solution boasts a **sub-300ms** voice-to-UI latency by utilizing a strict **
 
 | Screenshot                                            | Description                          |
 | ----------------------------------------------------- | ------------------------------------ |
-| [Screenshot 1](./assets/screenshots/chart-ui.png)     | Interactive Periodontal Chart & UI   |
-| [Screenshot 2](./assets/screenshots/dashboard.png)    | Live Voice Session Dashboard & Stats |
-| [Pitch Video](./assets/pitch/README.md)               | Link to your >30s social pitch video |
+| [Screenshot 1](chart-ui.png)                          | Interactive Periodontal Chart & UI   |
+| [Screenshot 2](dashboard.png)                         | Live Voice Session Dashboard & Stats |
+| [Pitch Video]                                         | Link to your >30s social pitch video |
 
 ---
 
