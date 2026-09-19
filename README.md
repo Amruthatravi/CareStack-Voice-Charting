@@ -162,6 +162,6 @@ Wait ~30 seconds, then open `http://localhost` in your browser.
 
 - [x] Clean, runnable source code committed to this **public** repo
 - [x] `README.md` fully filled in (all sections above)
-- [ ] Pitch video (>30s, English) posted on team member's social profile tagging **@DrishtiCET** & **@CareStack** and link added above
+- [x] Pitch video (>30s, English) posted on team member's social profile tagging **@DrishtiCET** & **@CareStack** and link added above
 - [x] All secrets/API keys removed from the repo
 - [x] Quick-start verified from a fresh clone (`git clone` + run)
