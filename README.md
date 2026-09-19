@@ -66,7 +66,7 @@ Our solution boasts a **sub-300ms** voice-to-UI latency by utilizing a strict **
 | ----------------------------------------------------- | ------------------------------------ |
 | [chart-ui.png](chart-ui.png)                          | Interactive Periodontal Chart & UI   |
 | [dashboard.png](dashboard.png)                         | Live Voice Session Dashboard & Stats |
-| [Pitch Video]                                         | Link to your >30s social pitch video |
+| [https://www.instagram.com/reel/DdcjpvShBnY/?stkn=MjZyOG9zNm9ubWVt]                                         | Link to your >30s social pitch video |
 
 ---
 
