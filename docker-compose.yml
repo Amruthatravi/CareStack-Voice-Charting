@@ -1,0 +1,49 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: perio
+      POSTGRES_PASSWORD: perio
+      POSTGRES_DB: perio
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U perio -d perio"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--appendonly", "yes"]   # AOF: the event stream survives restarts
+    volumes: [redisdata:/data]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+  backend:
+    build: ./backend
+    environment:
+      PORT: "8080"
+      DATABASE_URL: postgres://perio:perio@postgres:5432/perio?sslmode=disable
+      REDIS_ADDR: redis:6379
+      GROQ_API_KEY: ${GROQ_API_KEY:-}
+      GROQ_MODEL: ${GROQ_MODEL:-llama-3.1-8b-instant}
+      LLM_RPM: ${LLM_RPM:-20}
+      LLM_MIN_GAP_MS: ${LLM_MIN_GAP_MS:-1500}
+    depends_on:
+      postgres: { condition: service_healthy }
+      redis: { condition: service_healthy }
+    ports: ["8080:8080"]
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    depends_on: [backend]
+    ports: ["3000:80"]
+    restart: unless-stopped
+
+volumes:
+  pgdata:
+  redisdata:
